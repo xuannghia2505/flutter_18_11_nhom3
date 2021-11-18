@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController _heightController = TextEditingController();
   TextEditingController _weightController = TextEditingController();
+  TextEditingController _sexController = TextEditingController();
   double _bmiResult = 0;
   String _textResult = "";
 
@@ -77,11 +78,32 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  Container(
+                    width: 150,
+                    child: TextField(
+                      controller: _sexController,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 42,
+                          fontWeight: FontWeight.w300,
+                          color: accentHexColor),
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Sex",
+                        hintStyle: TextStyle(
+                            fontSize: 42,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white.withOpacity(.8)),
+                      ),
+                    ),
+                  ),
+
 
 
                 ],
               ),
-              
+
               SizedBox(
                 height: 30,
               ),
